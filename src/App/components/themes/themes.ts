@@ -19,6 +19,8 @@ const themes = {
     fontBody: 'Work Sans'
   },
   fontSize: {
+    fontSizeTitle: '1.8rem',
+    fontSizeLink: '1.7rem',
     fontSizeNormal: '1.6rem',
     fontSizeInput: '1.5rem',
     fontSizeSmall: '1.3rem'

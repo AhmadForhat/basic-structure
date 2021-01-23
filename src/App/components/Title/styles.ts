@@ -9,7 +9,7 @@ const {
 export const normal = {
     fontFamily: fontFamily.fontTitle,
     fontWeight: fontWeight.fontWeightTitle,
-    fontSize: fontSize.fontSizeNormal,
+    fontSize: fontSize.fontSizeTitle,
 }
 
 export const small = {
