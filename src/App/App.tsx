@@ -6,6 +6,7 @@ import Text from '../App/components/Text'
 import Link from '../App/components/Link'
 import Icon from '../App/components/Icon'
 import Image from '../App/components/Image'
+import Skeleton from '../App/components/Skeleton'
 
 const App = () => {
   return (
@@ -54,8 +55,9 @@ const App = () => {
         </Link>
         <Icon iconName="Camera"/>
         <Icon customName="Ban" width={48} height={48} />
-        <Image name="Error" width="100%" />
+        <Image name="Error" />
         <Image name="Success" width="100%" />
+        <Skeleton width="100" height="100" borderRadius={50} />
     </Wrapper>
   );
 }

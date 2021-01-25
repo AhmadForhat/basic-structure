@@ -1,5 +1,7 @@
-import React, { FC, lazy } from "react";
+import React, { Suspense, FC, lazy } from "react";
 import type * as Images from "./Images";
+
+import Skeleton from '../Skeleton'
 
 interface ImageProps extends Images.ImageProps {
   name: keyof typeof Images;
@@ -10,9 +12,9 @@ const ImageLoader = (name: keyof typeof Images) =>
 
 const Image: FC<ImageProps> = ({ name, ...rest }) => {
   return (
-    <React.Suspense fallback={<div />}>
+    <Suspense fallback={<Skeleton width="100%" height="250px" />}>
       {React.createElement(ImageLoader(name), rest)}
-    </React.Suspense>
+    </Suspense>
   );
 };
 
