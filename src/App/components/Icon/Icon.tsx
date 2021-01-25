@@ -5,7 +5,7 @@ import * as SvgIcons from "./SvgIcons";
 
 interface IconProps extends Feather.IconProps {
   iconName?: keyof typeof Feather;
-  customName?: keyof typeof SvgIcons
+  customName?: keyof typeof SvgIcons;
 }
 
 const Icon: FC<IconProps> = ({ iconName, customName, ...rest }) => {

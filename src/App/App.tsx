@@ -7,10 +7,11 @@ import Link from '../App/components/Link'
 import Icon from '../App/components/Icon'
 import Image from '../App/components/Image'
 import Skeleton from '../App/components/Skeleton'
+import Card from '../App/components/Card'
 
 const App = () => {
   return (
-      <Wrapper style={{backgroundColor: '#d1d1d1'}}>
+      <Wrapper hasPadding style={{backgroundColor: '#d1d1d1'}}>
         <Title textType="normal">
          Titulo normal
         </Title>
@@ -55,9 +56,10 @@ const App = () => {
         </Link>
         <Icon iconName="Camera"/>
         <Icon customName="Ban" width={48} height={48} />
-        <Image name="Error" />
+        <Image name="Error" width="100%" />
         <Image name="Success" width="100%" />
         <Skeleton width="100" height="100" borderRadius={50} />
+        <Card title="Meu teste" description="Um card sobre teste" iconName="Camera"/>
     </Wrapper>
   );
 }

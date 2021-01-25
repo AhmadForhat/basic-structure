@@ -14,6 +14,7 @@ const Skeleton = ({
 } : SkeletonProps) => (
   <ContentLoader
     animate
+    speed={0.6}
     width={width}
     height={height}
     backgroundColor="#f3f3f3"
