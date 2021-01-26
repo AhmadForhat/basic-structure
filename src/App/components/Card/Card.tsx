@@ -27,18 +27,18 @@ const Card = ({
     style,
     ...props
 }: CardProps) => {
-    const IconConstructor = () => {
-        if(iconName) return <Icon width={70} height={70} iconName={iconName} />
-        if(customName) return <Icon width={70} height={70} customName={customName} />
-        return null
-    }
     return (
         <div 
             style={{...container, ...style}} 
             {...props}
         >
             <div style={containerIcon}>
-                <IconConstructor />
+                <Icon 
+                    width={70} 
+                    height={70} 
+                    iconName={iconName} 
+                    customName={customName} 
+                />
             </div>
             <div style={containerText}>
                 <Title>
