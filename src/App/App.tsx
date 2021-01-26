@@ -8,6 +8,7 @@ import Icon from '../App/components/Icon'
 import Image from '../App/components/Image'
 import Skeleton from '../App/components/Skeleton'
 import Card from '../App/components/Card'
+import GeoMap from '../App/components/GeoMap'
 
 const App = () => {
   return (
@@ -62,6 +63,12 @@ const App = () => {
         <Card>
           <Text textType="normal">Batata</Text>
         </Card>
+        <GeoMap 
+          lat={-23.52935630186012}
+          lng={-46.63848150435309}
+          width="400px"
+          height="400px"
+        />
     </Wrapper>
   );
 }
