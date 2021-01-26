@@ -59,7 +59,9 @@ const App = () => {
         <Image name="Error" width="100%" />
         <Image name="Success" width="100%" />
         <Skeleton width="100" height="100" borderRadius={50} />
-        <Card title="Meu teste" description="Um card sobre teste" iconName="Camera"/>
+        <Card>
+          <Text textType="normal">Batata</Text>
+        </Card>
     </Wrapper>
   );
 }
