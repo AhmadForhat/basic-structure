@@ -1,5 +1,7 @@
 import React from 'react';
 
+import useDevice from './hooks/useDevice'
+
 import Wrapper from '../App/components/Wrapper'
 import Title from '../App/components/Title'
 import Text from '../App/components/Text'
@@ -12,6 +14,13 @@ import GeoMap from '../App/components/GeoMap'
 import Header from '../App/components/Header'
 
 const App = () => {
+  const {
+    isSmallMobile,
+    isMobile,
+    isDesktop
+  }= useDevice()
+
+  console.log(isSmallMobile, isMobile, isDesktop)
   return (
       <Wrapper hasPadding style={{backgroundColor: '#d1d1d1'}}>
         <Header
