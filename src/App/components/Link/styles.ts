@@ -15,6 +15,7 @@ export const normal = {
     color: colors.primaryColor,
     display: 'flex',
     alignItens: 'center',
+    cursor: 'pointer',
 }
 
 export const disable = {

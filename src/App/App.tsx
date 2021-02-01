@@ -9,10 +9,15 @@ import Image from '../App/components/Image'
 import Skeleton from '../App/components/Skeleton'
 import Card from '../App/components/Card'
 import GeoMap from '../App/components/GeoMap'
+import Header from '../App/components/Header'
 
 const App = () => {
   return (
       <Wrapper hasPadding style={{backgroundColor: '#d1d1d1'}}>
+        <Header
+          title="Primeiro Teste"
+          to="/"
+        />
         <Title textType="normal">
          Titulo normal
         </Title>
