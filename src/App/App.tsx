@@ -10,6 +10,7 @@ import Image from '../App/components/Image'
 import Card from '../App/components/Card'
 import GeoMap from '../App/components/GeoMap'
 import Header from '../App/components/Header'
+import ReviewScore from '../App/components/ReviewScore'
 
 import useDevice from './hooks/useDevice'
 
@@ -87,6 +88,7 @@ const App = () => {
           width="400px"
           height="400px"
         />
+        <ReviewScore score={4.3} />
     </Wrapper>
   );
 }
