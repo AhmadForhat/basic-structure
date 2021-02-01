@@ -1,7 +1,7 @@
 import React, { Suspense, FC, lazy } from "react";
-import type * as Images from "./Images";
+import Skeleton from 'react-loading-skeleton';
 
-import Skeleton from '../Skeleton'
+import type * as Images from "./Images";
 
 interface ImageProps extends Images.ImageProps {
   name: keyof typeof Images;

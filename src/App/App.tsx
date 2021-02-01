@@ -1,6 +1,5 @@
 import React from 'react';
-
-import useDevice from './hooks/useDevice'
+import Skeleton from 'react-loading-skeleton';
 
 import Wrapper from '../App/components/Wrapper'
 import Title from '../App/components/Title'
@@ -8,10 +7,11 @@ import Text from '../App/components/Text'
 import Link from '../App/components/Link'
 import Icon from '../App/components/Icon'
 import Image from '../App/components/Image'
-import Skeleton from '../App/components/Skeleton'
 import Card from '../App/components/Card'
 import GeoMap from '../App/components/GeoMap'
 import Header from '../App/components/Header'
+
+import useDevice from './hooks/useDevice'
 
 const App = () => {
   const {
@@ -73,7 +73,11 @@ const App = () => {
         <Icon customName="Ban" width={48} height={48} />
         <Image name="Error" width="100%" />
         <Image name="Success" width="100%" />
-        <Skeleton width="100" height="100" borderRadius={50} />
+        <Skeleton 
+          circle={true}
+          width="100px"
+          height="100px"
+        />
         <Card>
           <Text textType="normal">Batata</Text>
         </Card>
