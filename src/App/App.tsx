@@ -11,6 +11,7 @@ import Card from '../App/components/Card'
 import GeoMap from '../App/components/GeoMap'
 import Header from '../App/components/Header'
 import ReviewScore from '../App/components/ReviewScore'
+import Slide from '../App/components/Slide'
 
 import useDevice from './hooks/useDevice'
 
@@ -89,6 +90,7 @@ const App = () => {
           height="400px"
         />
         <ReviewScore score={4.3} />
+        <Slide />
     </Wrapper>
   );
 }

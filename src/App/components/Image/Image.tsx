@@ -13,7 +13,9 @@ const ImageLoader = (name: keyof typeof Images) =>
 const Image: FC<ImageProps> = ({ name, ...rest }) => {
   return (
     <Suspense fallback={<Skeleton width="100%" height="250px" />}>
-      {React.createElement(ImageLoader(name), rest)}
+      {
+        React.createElement(ImageLoader(name), rest)
+      }
     </Suspense>
   );
 };
