@@ -1,49 +1,35 @@
-import React, {useState} from 'react'
+import React, {useRef} from 'react'
 
-import slide1 from './slide1.png';
-import slide2 from './slide2.png';
-import {containerImages, container, circle, containerControl, containerImage, containerNextImage} from './styles'
+import useScrollSlide from "./useScrollSlide";
 
-const nextIndex = (array: string[], currentIndex: number) => {
-    const numberElements = array.length - 1
-    return currentIndex + 1 > numberElements ? 0 : currentIndex + 1
+import {container, containerList, list, firstItem} from './styles'
+
+interface SlideProps extends React.HTMLAttributes<HTMLDivElement> {
+    components: React.ReactElement<Element>[]
 }
 
-const arrayImages = [
-    slide1,
-    slide2,
-    slide1,
-    slide2
-]
-
 const Slide = ({
-    height,
-}: {height?: string | number}) => {
-    const [currentIndex, setCurrentIndex] = useState(0)
-    console.log(currentIndex)
-    
+    components,
+    style,
+}: SlideProps) => {
+    const divRef = useRef<HTMLHeadingElement>(null)
+
+    useScrollSlide(divRef);
+
+    const containerStyles = {...style, ...container}
+
     return (
-        <>
-        <div style={container(height)}>
-            <div>
-                <div style={containerImages(height)}>
-                    <img style={containerImage(height)} alt="Slide atual" src={arrayImages[currentIndex]}/>
-                    <img style={containerNextImage(height)} alt="Próximo slide" src={arrayImages[nextIndex(arrayImages, currentIndex)]}/>
-                </div>
-            </div>
-            <div style={containerControl}>
+        <div style={containerStyles} ref={divRef}>
+            <ul style={containerList}>
                 {
-                    arrayImages.map((image,index) => (
-                        <button 
-                            aria-label={`Ir para o slide ${index}`}
-                            style={circle()}
-                            onClick={() => setCurrentIndex(index)}
-                        />
+                    components.map((item,index) => (
+                        <li style={index === 0 ? firstItem : list}>
+                            {item}
+                        </li>
                     ))
                 }
-            </div>
+            </ul>
         </div>
-         </>
     )
 }
 
