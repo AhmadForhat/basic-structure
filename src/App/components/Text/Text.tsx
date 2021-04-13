@@ -1,25 +1,25 @@
-import React from 'react';
+import React, { forwardRef } from "react"
+import themes from "../themes"
+import textStyle from "./styles"
 
-import fontStyle from './styles'
-
-interface TextProps extends React.HTMLAttributes<HTMLHeadingElement> {
-    textType?: string;
-    custonStyles?: any;
+interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
+  /** font-size do texto */
+  size?: keyof typeof themes.fontSize
+  /** font-weight do text */
+  weight?: keyof typeof themes.fontWeight
+  /** Conteudo do texto */
+  children: React.ReactNode
+  /** Aqui pode-se passar estilos customizados */
+  style?: React.CSSProperties
 }
 
-const Text = ({
-    textType = 'normal',
-    children,
-    style,
-    ...props
-} : TextProps) => {
-    const styles = {...fontStyle(textType), ...style}
+const Text = forwardRef(({ size, weight, children, style, ...props }: TextProps, ref: any) => {
+  const styles = { ...textStyle({ size, weight }), ...style }
+  return (
+    <p style={styles} ref={ref} {...props}>
+      {children}
+    </p>
+  )
+})
 
-    return (
-        <p style={styles} {...props}>
-            {children}
-        </p>
-    )
-}
-
-export default Text;
+export default Text

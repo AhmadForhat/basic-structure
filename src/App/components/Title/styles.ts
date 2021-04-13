@@ -1,20 +1,13 @@
-import themes from '../themes'
+import themes from "../themes"
 
-const {
-    fontFamily,
-    fontWeight,
-    fontSize,
-} = themes
-
-export const normal = {
-    fontFamily: fontFamily.fontTitle,
-    fontWeight: fontWeight.fontWeightTitle,
-    fontSize: fontSize.fontSizeTitle,
+type titleStyleProps = {
+  size?: keyof typeof themes.fontSize
 }
 
-export const small = {
-    fontFamily: fontFamily.fontTitle,
-    fontWeight: fontWeight.fontWeightBody,
-    fontSize: fontSize.fontSizeSmall,
-    textTransform: 'uppercase',
-}
+const titleStyle = ({ size = "large" }: titleStyleProps) => ({
+  fontFamily: themes.fontFamily.title,
+  fontSize: themes.fontSize[size],
+  fontWeight: themes.fontWeight.title,
+})
+
+export default titleStyle

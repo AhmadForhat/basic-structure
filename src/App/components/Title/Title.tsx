@@ -1,29 +1,23 @@
-import React from 'react';
-
-import {
-    small,
-    normal
-} from './styles'
+import React, { forwardRef } from "react"
+import themes from "../themes"
+import titleStyle from "./styles"
 
 interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
-    textType?: string;
-    custonStyles?: any;
+  /** font-size do titulo */
+  size?: keyof typeof themes.fontSize
+  /** Conteudo do titulo */
+  children: React.ReactNode
+  /** Aqui pode-se passar estilos customizados */
+  style?: React.CSSProperties
 }
 
-const Title = ({
-    textType,
-    children,
-    style,
-    ...props
-} : TitleProps) => {
-    const titleStyle = textType === 'small' ? small : normal
-    const styles = {...titleStyle, ...style}
+const Title = forwardRef(({ size, children, style, ...props }: TitleProps, ref: any) => {
+  const styles = { ...titleStyle({ size }), ...style }
+  return (
+    <h2 style={styles} ref={ref} {...props}>
+      {children}
+    </h2>
+  )
+})
 
-    return (
-        <h2 style={styles} {...props}>
-            {children}
-        </h2>
-    )
-}
-
-export default Title;
+export default Title

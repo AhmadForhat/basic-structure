@@ -1,40 +1,14 @@
-import themes from '../themes'
+import themes from "../themes"
 
-const {
-    fontFamily,
-    fontWeight,
-    fontSize,
-} = themes
-
-const normal = {
-    fontFamily: fontFamily.fontBody,
-    fontWeight: fontWeight.fontWeightBody,
-    fontSize: fontSize.fontSizeNormal,
+type textStyleProps = {
+  size?: keyof typeof themes.fontSize
+  weight?: keyof typeof themes.fontWeight
 }
 
-const small = {
-    fontFamily: fontFamily.fontBody,
-    fontWeight: fontWeight.fontWeightBody,
-    fontSize: fontSize.fontSizeSmall,
-}
+const textStyle = ({ size = "medium", weight = "body" }: textStyleProps) => ({
+  fontFamily: themes.fontFamily.body,
+  fontSize: themes.fontSize[size],
+  fontWeight: themes.fontWeight[weight],
+})
 
-const muted = {
-    fontFamily: fontFamily.fontBody,
-    fontWeight: fontWeight.fontWeightMuted,
-    fontSize: fontSize.fontSizeNormal,
-}
-
-const fontStyle = (textType: string) => {
-    switch (textType) {
-        case 'normal':
-            return normal
-        case 'small':
-            return small
-        case 'muted':
-            return muted
-        default:
-            return normal;
-    }
-}
-
-export default fontStyle
+export default textStyle

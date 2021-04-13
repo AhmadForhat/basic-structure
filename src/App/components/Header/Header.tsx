@@ -1,40 +1,31 @@
-import React from 'react'
+import { useRef } from "react"
+import {Link} from 'react-router-dom'
 
-import Icon from '../Icon'
-import Link from '../Link'
-import Title from '../Title'
-import {
-    container,
-    containerText,
-    containerIcon
-} from './styles'
+import Icon from "../Icon"
+import Title from "../Title"
 
-interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
-    to: string;
-    title: string;
+import { container, iconStyle, titleStyle } from "./styles"
+
+interface HeaderProps {
+  /** path para quando o usuario apertar o icone de voltar */
+  to: string
+  /** titulo do header */
+  title: string
 }
 
-const Header = ({
-    title,
-    to
-}: HeaderProps) => {
-    return (
-        <div style={container}>
-            <Link 
-                href={to}
-            >
-                <Icon 
-                    style={containerIcon}
-                    iconName="ArrowLeft"
-                />
-            </Link>
-            <div style={containerText}>
-                <Title>
-                    {title}
-                </Title>
-            </div>
-        </div>
-    )
+const Header = ({ to, title }: HeaderProps) => {
+  /** adjust icon size based on title height */
+  const titleRef = useRef(null)
+  return (
+    <div style={container}>
+      <Link to={to}>
+        <Icon width={24} height={24} featherName="ArrowLeft" style={iconStyle} />
+      </Link>
+      <Title ref={titleRef} style={titleStyle}>
+        {title}
+      </Title>
+    </div>
+  )
 }
 
 export default Header

@@ -1,19 +1,29 @@
-import React, { FC } from "react";
-import * as Feather from "react-feather";
+import React from "react"
+import * as Feather from "react-feather"
+import * as Icons from "./Icons"
 
-import * as SvgIcons from "./SvgIcons";
-
-interface IconProps extends Feather.IconProps {
-  iconName?: keyof typeof Feather;
-  customName?: keyof typeof SvgIcons;
+interface onlyFeatherIcon extends Feather.IconProps {
+  /** nome dos icones da biblioteca Feather */
+  featherName: keyof typeof Feather
+  /** customName não é permitido se um featherName for passado */
+  customName?: never
+}
+interface onlyCustomIcon extends Feather.IconProps {
+  /** featherName não é permitido se um customName for passado */
+  featherName?: never
+  /** nome dos icones customizados (adicionados manualmente no componente) */
+  customName: keyof typeof Icons
 }
 
-const Icon: FC<IconProps> = ({ iconName, customName, ...rest }) => {
-  const IconFeather = iconName && Feather[iconName]
-  const IconCustom = customName && SvgIcons[customName]
-  if(IconFeather) return <IconFeather {...rest}/>
-  if(IconCustom) return <IconCustom {...rest} />
-  return null
-};
+/** esse type garante que apenas uma das props seja aceita. Nenhuma ou ambas é inválido */
+export type IconProps = onlyFeatherIcon | onlyCustomIcon
 
-export default Icon;
+const Icon = ({ featherName, customName, ...props }: IconProps) => {
+  const FeatherIcon = featherName && Feather[featherName]
+  const CustomIcon = customName && Icons[customName]
+  if (FeatherIcon) return <FeatherIcon {...props} />
+  if (CustomIcon) return <CustomIcon {...props} />
+  return null
+}
+
+export default Icon
