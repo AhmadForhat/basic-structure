@@ -1,45 +1,47 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
 import axios from 'axios'
+import Container from '@bit/ziro.views.container'
 
 import Product, {cardType} from '../components/Product'
 import Header from "../components/Header"
 
 interface ParamTypes {
-  store: string
-  id: string
+  shop: string
+  product: string
 }
 
 const ProductDisplay = () => {
-  const [product, setProduct] = useState({})
+  const [newProduct, setNewProduct] = useState({})
   const [isLoading, setLoading] = useState(true)
 
-  const { store,  id} = useParams<ParamTypes>()
+  const { shop,  product} = useParams<ParamTypes>()
   useEffect(() => {
     const fetch = async () => {
-      const result = await axios(`https://fakestoreapi.com/products/${id}`, { method: "get" })
+      const result = await axios(`https://fakestoreapi.com/products/${product}`, { method: "get" })
       const { data: listOfShops } = result
       const newListOfShops: cardType = {
           ...listOfShops,
           alt: 'batata',
           children: <h2>batata</h2>,
+          to: '/',
       }
-      setProduct(newListOfShops)
+      setNewProduct(newListOfShops)
       setLoading(false)
     }
     fetch()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
 
-    <>
-      <Header to={`/productsGallery/${store}`} title="Ziro" />
-      <Product 
-        skeletonHeight={400}
-        card={product}
+    <Container>
+      <Header to={`/shops/${shop}`} title="Ziro" />
+      <Product
+        card={newProduct}
         styleImage={{height: 400}}
         isLoading={isLoading}
       />
-    </>
+    </Container>
   )
 }
 

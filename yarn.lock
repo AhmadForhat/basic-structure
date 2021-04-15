@@ -1195,6 +1195,81 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@bit/ziro.utils.component-state@^0.0.6":
+  version "0.0.6"
+  resolved "https://node.bit.dev/ziro.utils.component-state/-/ziro.utils.component-state-0.0.6.tgz#97e6acb89c39c7175802f021bb18c1c50a223943"
+  integrity sha1-l+asuJw5xxdYAvAhuxjBxQoiOUM=
+
+"@bit/ziro.utils.device-detect@^0.0.3":
+  version "0.0.3"
+  resolved "https://node.bit.dev/ziro.utils.device-detect/-/ziro.utils.device-detect-0.0.3.tgz#b1f96b4e4b151a3273ab1d8d3b74e58592f853f8"
+  integrity sha1-sflrTksVGjJzqx2NO3TlhZL4U/g=
+
+"@bit/ziro.utils.string-formatter@^0.0.2":
+  version "0.0.2"
+  resolved "https://node.bit.dev/ziro.utils.string-formatter/-/ziro.utils.string-formatter-0.0.2.tgz#8afe3e8adcb42ca08f49a23fc7b5e3e8c15d8eae"
+  integrity sha1-iv4+ity0LKCPSaI/x7Xj6MFdjq4=
+
+"@bit/ziro.utils.themes@^0.0.6":
+  version "0.0.6"
+  resolved "https://node.bit.dev/ziro.utils.themes/-/ziro.utils.themes-0.0.6.tgz#83eda917baf5d1d1ade12853588d111eb5b06ad3"
+  integrity sha1-g+2pF7r10dGt4ShTWI0RHrWwatM=
+
+"@bit/ziro.utils.use-size@^0.0.3":
+  version "0.0.3"
+  resolved "https://node.bit.dev/ziro.utils.use-size/-/ziro.utils.use-size-0.0.3.tgz#34dc031916892477cee5470b1ed42f260293a5fa"
+  integrity sha1-NNwDGRaJJHfO5UcLHtQvJgKTpfo=
+
+"@bit/ziro.views.button@^0.0.15":
+  version "0.0.15"
+  resolved "https://node.bit.dev/ziro.views.button/-/ziro.views.button-0.0.15.tgz#3bcd7da15aff01d6820f40669ac7ba32d974319a"
+  integrity sha1-O819oVr/AdaCD0Bmmse6Mtl0MZo=
+
+"@bit/ziro.views.container@^0.0.3":
+  version "0.0.3"
+  resolved "https://node.bit.dev/ziro.views.container/-/ziro.views.container-0.0.3.tgz#5340477d7403ddd7b7f3adb0ceef07d3d394c79e"
+  integrity sha1-U0BHfXQD3de3862wzu8H09OUx54=
+
+"@bit/ziro.views.dots-loader@^0.0.7":
+  version "0.0.7"
+  resolved "https://node.bit.dev/ziro.views.dots-loader/-/ziro.views.dots-loader-0.0.7.tgz#0c49fbed14166ecad4da48d1cc9be5326294f1bb"
+  integrity sha1-DEn77RQWbsrU2kjRzJvlMmKU8bs=
+
+"@bit/ziro.views.header@^0.0.1":
+  version "0.0.1"
+  resolved "https://node.bit.dev/ziro.views.header/-/ziro.views.header-0.0.1.tgz#bb1b3a70772ad2fdd4baa63622cf14316c94325d"
+  integrity sha1-uxs6cHcq0v3UuqY2Is8UMWyUMl0=
+
+"@bit/ziro.views.icon@^0.0.1":
+  version "0.0.1"
+  resolved "https://node.bit.dev/ziro.views.icon/-/ziro.views.icon-0.0.1.tgz#fdcd64fd21c94b43ef23cc0bfa12ec71cf8d4a61"
+  integrity sha1-/c1k/SHJS0PvI8wL+hLscc+NSmE=
+
+"@bit/ziro.views.input@^0.0.3":
+  version "0.0.3"
+  resolved "https://node.bit.dev/ziro.views.input/-/ziro.views.input-0.0.3.tgz#6c416a88a5c86ac14635c8356ceee5c35c3ee1ea"
+  integrity sha1-bEFqiKXIasFGNcg1bO7lw1w+4eo=
+
+"@bit/ziro.views.link@^0.0.9":
+  version "0.0.9"
+  resolved "https://node.bit.dev/ziro.views.link/-/ziro.views.link-0.0.9.tgz#3e79d88e0192423d43b75046d7e631eb0c65edad"
+  integrity sha1-PnnYjgGSQj1Dt1BG1+Yx6wxl7a0=
+
+"@bit/ziro.views.skeleton@^0.0.5":
+  version "0.0.5"
+  resolved "https://node.bit.dev/ziro.views.skeleton/-/ziro.views.skeleton-0.0.5.tgz#8a43d0f775b84957947dc3974fe37b7e9b90ab41"
+  integrity sha1-ikPQ93W4SVeUfcOXT+N7fpuQq0E=
+
+"@bit/ziro.views.text@^0.0.10":
+  version "0.0.10"
+  resolved "https://node.bit.dev/ziro.views.text/-/ziro.views.text-0.0.10.tgz#a8db1578498d8123b89577314d14a71fa45e60f3"
+  integrity sha1-qNsVeEmNgSO4lXcxTRSnH6ReYPM=
+
+"@bit/ziro.views.title@^0.0.9":
+  version "0.0.9"
+  resolved "https://node.bit.dev/ziro.views.title/-/ziro.views.title-0.0.9.tgz#1efec6b0dfb899fa8d1d6df01ddd355c2f2085cc"
+  integrity sha1-Hv7GsN+4mfqNHW3wHd01XC8ghcw=
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -2156,6 +2231,11 @@
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.0.tgz#215c231dff736d5ba92410e6d602050cce7e273f"
   integrity sha512-eQ9qFW/fhfGJF8WKHGEHZEyVWfZxrT+6CLIJGBcZPfxUh/+BnEj+UCGYMlr9qZuX/2AltsvwrGqp0LhEW8D0zQ==
+
+"@types/webfontloader@^1.6.32":
+  version "1.6.32"
+  resolved "https://registry.yarnpkg.com/@types/webfontloader/-/webfontloader-1.6.32.tgz#8a02698b7a07a9f2cc8e34d7223dc5d59ccff77a"
+  integrity sha512-l83V/2iHvBTIlKUM1+UlabS/Jd65HVfKmqS+zPhwDlgldPtd5ujPDt0Y1es19xLWcN8NC3wwSTd71Qxbst+Kpw==
 
 "@types/webpack-sources@*":
   version "2.1.0"
@@ -9955,6 +10035,13 @@ react-dev-utils@^11.0.1:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
+react-device-detect@^1.17.0:
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-1.17.0.tgz#a00b4fd6880cebfab3fd8a42a79dc0290cdddca9"
+  integrity sha512-bBblIStwpHmoS281JFIVqeimcN3LhpoP5YKDWzxQdBIUP8S2xPvHDgizLDhUq2ScguLfVPmwfF5y268EEQR60w==
+  dependencies:
+    ua-parser-js "^0.7.24"
+
 react-dom@^17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz#1de2560474ec9f0e334285662ede52dbc5426fc6"
@@ -11869,6 +11956,11 @@ typescript@^4.0.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.2.tgz#1450f020618f872db0ea17317d16d8da8ddb8c4c"
   integrity sha512-tbb+NVrLfnsJy3M59lsDgrzWIflR4d4TIUjz+heUnHZwdF7YsrMTKoRERiIvI2lvBG95dfpLxB21WZhys1bgaQ==
 
+ua-parser-js@^0.7.24:
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
+
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-1.0.4.tgz#2619800c4c825800efdd8343af7dd9933cbe2818"
@@ -12173,6 +12265,11 @@ web-vitals@^0.2.4:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-0.2.4.tgz#ec3df43c834a207fd7cdefd732b2987896e08511"
   integrity sha512-6BjspCO9VriYy12z356nL6JBS0GYeEcA457YyRzD+dD6XYCQ75NKhcOHUMHentOE7OcVCIXXDvOm0jKFfQG2Gg==
+
+webfontloader@^1.6.28:
+  version "1.6.28"
+  resolved "https://registry.yarnpkg.com/webfontloader/-/webfontloader-1.6.28.tgz#db786129253cb6e8eae54c2fb05f870af6675bae"
+  integrity sha1-23hhKSU8tujq5UwvsF+HCvZnW64=
 
 webidl-conversions@^5.0.0:
   version "5.0.0"

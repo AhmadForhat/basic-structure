@@ -1,5 +1,7 @@
+import {Link} from 'react-router-dom'
+
 import Product, {SkeletonCard, cardType} from '../Product'
-import {buttonContainer, container, containerCard} from './style'
+import {container, containerCard} from './style'
 
 interface ProductGalleryProps {
   /** estado de loading do componente */
@@ -10,36 +12,30 @@ interface ProductGalleryProps {
   maxCardsPerPage: number
   styleImage?: React.CSSProperties
   styleCardContainer?: React.CSSProperties
-  skeletonHeight?: string | number
 }
 
-const ProductCards = ({ styleImage, styleCardContainer, isLoading, cards, maxCardsPerPage, skeletonHeight }: ProductGalleryProps) => {
+const ProductCards = ({ styleImage, styleCardContainer, isLoading, cards, maxCardsPerPage }: ProductGalleryProps) => {
   if (isLoading) {
     /** to display skeletons correctly we must map over a fake array while component is loading */
     const iterator = Array.from(Array(maxCardsPerPage).keys())
     return (
-      <div style={container}>
+      <>
         {iterator.map((index: number) => (
           <div style={containerCard} key={index}>
-            <SkeletonCard skeletonHeight={skeletonHeight} />
+            <SkeletonCard />
           </div>
         ))}
-      </div>
+      </>
     )
   }
   return (
     <>
       {cards.map((card: cardType) => (
-        <button
-          onClick={card.onClick}
-          type="submit"
-          key={card.id}
-          style={buttonContainer}
+        <Link
+          to={card.to || '/'}
         >
-          <div style={containerCard}>
             <Product styleImage={styleImage} styleCardContainer={styleCardContainer} card={card} />
-          </div>
-        </button>
+        </Link>
       ))}
     </>
   )
@@ -49,11 +45,11 @@ const GalleryContainer = ({ children }: { children: React.ReactNode }) => {
   return <div style={container}>{children}</div>
 }
 
-const Products = ({ ...props }: ProductGalleryProps) => {
+const ShopGallery = ({ ...props }: ProductGalleryProps) => {
   return (
     <GalleryContainer>
       <ProductCards {...props} />
     </GalleryContainer>
   )
 }
-export default Products
+export default ShopGallery

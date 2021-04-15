@@ -2,34 +2,30 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link,
 } from "react-router-dom";
 
-import {
-  container
-} from './style'
-
-import ShopsGallery from './views/ShopsGallery'
-import ProductsGallery from './views/ProductsGallery'
+import Shops from './views/Shops'
+import Shop from './views/Shop'
 import ProductDisplay from './views/ProductDisplay'
 
 export default function App() {
   return (
     <Router>
         <Switch>
-          <Route path="/product/:store/:id">
-          <div style={container}>
+          <Route path="/shops/:shop/:product">
             <ProductDisplay />
-          </div>
           </Route>
-          <Route path="/productsGallery/:store">
-            <div style={container}>
-              <ProductsGallery />
-            </div>
+          <Route path="/shops/:shop">
+            <Shop />
+          </Route>
+          <Route path="/shops">
+            <Shops />
           </Route>
           <Route path="/">
-            <div style={container}>
-              <ShopsGallery />
-            </div>
+            <Link to="/shops">
+              Iniciar
+            </Link>
           </Route>
         </Switch>
     </Router>

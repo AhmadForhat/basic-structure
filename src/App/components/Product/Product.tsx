@@ -1,6 +1,6 @@
 import Skeleton from "react-loading-skeleton"
 
-import {containerSkeleton, skeleton, cardContainer, imgStyle} from './style'
+import {containerSkeleton, cardContainer, imgStyle} from './style'
 
 export interface cardType {
   id?: number
@@ -8,7 +8,7 @@ export interface cardType {
   category?: string
   image?: string
   children?: React.ReactNode
-  onClick?: () => void
+  to?: string
 }
 
 interface ProductCardProps {
@@ -17,20 +17,19 @@ interface ProductCardProps {
   styleImage?: React.CSSProperties
   styleCardContainer?: React.CSSProperties
   isLoading?: boolean
-  skeletonHeight?: string | number
 }
 
-export const SkeletonCard = ({skeletonHeight}: {skeletonHeight?: string | number}) => {
+export const SkeletonCard = () => {
   return (
     <div style={containerSkeleton}>
-      <Skeleton height={skeletonHeight || '200px'} />
-      <Skeleton height="20px" style={skeleton} />
-      <Skeleton height="20px" style={skeleton} />
+      <Skeleton height="150px" />
+      <Skeleton height="20px" />
+      <Skeleton height="20px" />
     </div>
   )
 }
 
-const ShopCard = ({ card, styleImage, styleCardContainer }: ProductCardProps) => {
+const ProductCard = ({ card, styleImage, styleCardContainer }: ProductCardProps) => {
   return (
     <div style={{ ...cardContainer, ...styleCardContainer }}>
       <img src={card.image} alt={card.alt} style={{ ...imgStyle, ...styleImage }} />
@@ -39,13 +38,13 @@ const ShopCard = ({ card, styleImage, styleCardContainer }: ProductCardProps) =>
   )
 }
 
-const Product = ({isLoading, skeletonHeight, ...props}: ProductCardProps) => {
+const Product = ({isLoading, ...props}: ProductCardProps) => {
   if(isLoading) return (
-    <SkeletonCard skeletonHeight={skeletonHeight} />
+    <SkeletonCard />
   )
 
   return (
-    <ShopCard {...props} />
+    <ProductCard {...props} />
   )
 }
 
